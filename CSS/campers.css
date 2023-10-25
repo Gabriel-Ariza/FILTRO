@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inclusive Sans", sans-serif;
+}
+
+
+/* =========================  ESTILOS GENERALES ========================= */
+
+.container {
+    height: 40vh;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+.titulo {
+    height: 24vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.titulo h1 {
+    color: white;
+    font-size: 3em;
+}
+
+.info {
+    height: 16vh;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid red;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+    gap: 20px;
+}
+
+.btn_ {
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: azure;
+}
+
+#add_camper{background-color: rgb(53, 230, 112);}
+#modify_camper{background-color: rgb(67, 118, 238);}
+#delete_camper{background-color: rgb(238, 67, 67);}
+#for_camper {background-color: rgb(150, 67, 238);}
+
+
+/* =========================  ESTILOS LISTADO CAMPERS ========================= */
+
+.contenedor_lista {
+    height: auto;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff8383;
+    padding: 30px 0;
+}
+.cerrar_ {
+    align-self: flex-end;
+    margin-right: 10%;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+
+}
+.subtitulo{
+    color: white;
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+.listado_campers {
+    width: 90%;
+    height: fit-content;
+    background-color: #F3F4F6;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0;
+    border: 3px solid #1a1a1a;
+
+}
+.camper_listado, .informacion_datos{
+    width: 100%;
+    height: fit-content;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
+}
+.camper_listado p {
+    font-size: 1.2em;
+    max-width: 400px;
+}
+
+
+
+
+.container_reporte {
+    height: 30vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: aliceblue;
+    display: flex;
+    align-items: flex-end;
+}
+.contenido_reporte {
+    height: 16vh;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido_reporte h1 {
+    color: white;
+    font-size: 2em;
+}
+.report_btn {
+    margin: 10px 0;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: azure;
+    background-color: rgb(251, 172, 62);
+}
+
+
+
+
+/* =========================  ESTILOS DEL MODAL ========================= */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.modal_content {
+    position: relative;
+    width: 55%;
+    height: 80%;
+    border-radius: 20px;
+    font-family: 'Inclusive Sans', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #2fff55d8, 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (max-width: 850px) {
+    .modal_content {
+        width: 90%;
+    }
+    .modal h2 {
+        font-size: 1.8rem;
+    }
+    .modal label{
+        font-size: 0.7rem;
+    }
+}
+#formularioRegistro {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 10px;
+}
+.modal h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 1rem;
+}
+.modal label{
+    font-size: 1.5rem;
+}
+.inpt {
+    height: 40px;
+    margin-left: 4px;
+    font-size: 1rem;
+    background: #F3F4F6;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, 
+    color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+.inpt:hover, .inpt:focus {
+    outline: none;
+    border-color: #05060fca;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.content_guardar {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+.guardar {
+    min-width: 190px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgb(56, 139, 255);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inclusive Sans", sans-serif;
+}
+
+
+/* =========================  ESTILOS GENERALES ========================= */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    height: 17vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo h1 {
+    color: white;
+    font-size: 2em;
+}   
+
+.contenido {
+    height: 73vh;
+    width: 100%;
+    background-image: url(../IMG/fondomine.png);    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+
+/* =========================  ESTILOS CONTENIDO  ========================= */
+
+.botones {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.container-info{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:azure;
+}   
+.info {
+    padding: 10px;
+    font-family: "Inclusive Sans", sans-serif;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 10rem;
+    box-shadow: 0 0 1rem 0 rgba(255,255,255,.2);
+    border-radius: 5p   x;
+    background-color: rgba(255, 255, 255, 0.146);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.boton {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* =========================  ESTILOS FOOTER  ========================= */
+
+.pie {
+    height: 10vh;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pie p {
+    color: white;
+    font-size: 0.9em;
+}
